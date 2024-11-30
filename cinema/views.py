@@ -19,9 +19,7 @@ class MovieViewSet(viewsets.ModelViewSet):
 
 
 class ActorList(
-    generics.ListAPIView,
-    mixins.ListModelMixin,
-    mixins.CreateModelMixin
+    generics.ListCreateAPIView,
 ):
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer

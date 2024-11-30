@@ -4,8 +4,8 @@ from django.db import models
 class Movie(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    actors = models.ManyToManyField("Actor", related_name="actors")
-    genres = models.ManyToManyField("Genre", related_name="genres")
+    actors = models.ManyToManyField("Actor", related_name="movies")
+    genres = models.ManyToManyField("Genre", related_name="movies")
     duration = models.IntegerField()
 
     def __str__(self):

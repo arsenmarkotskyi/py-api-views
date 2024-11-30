@@ -12,7 +12,7 @@ from rest_framework import routers
 
 app_name = "cinema"
 router = routers.DefaultRouter()
-router.register("movies", MovieViewSet, basename="movies")
+router.register("movies", MovieViewSet, basename="movie")
 
 cinema_hall_list = CinemaHallViewSet.as_view(
     actions={
